@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- Login page pieces live in `src/components/login/`; all sign-in behaviour stays in `useLogin.ts` so the simulated auth can be swapped for a real backend in one place.
+- Form validation rules live in `src/lib/auth-schemas.ts` (zod) with tests in `src/test/auth-schemas.test.ts`; keep UI and rules separate so rules stay testable.
+- The app is dark-only: `:root` in `src/styles.css` holds the dark tokens; do not add a light theme or toggle.
