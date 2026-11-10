@@ -16,7 +16,7 @@ export function BrandHeader({ view }: { view: AuthView }) {
         <span className="size-1.5 rounded-full bg-brand-to shadow-[0_0_10px_var(--brand-to)]" />
         All-in-one business OS for Nepal
       </span>
-      <h1 className="font-display text-[clamp(2.1rem,4vw,3.4rem)] font-extrabold leading-[1.02] tracking-tight">
+      <h1 className="font-display text-[clamp(2rem,3.3vw,2.9rem)] font-bold leading-[1.05] tracking-[-0.02em]">
         Launch faster with <span className="text-gradient-brand">Platerea</span>
       </h1>
       <p className="max-w-md text-[15px] leading-relaxed text-muted-foreground">{COPY[view].sub}</p>

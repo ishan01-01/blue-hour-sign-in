@@ -44,7 +44,7 @@ export function DashboardMockup() {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 1.1, duration: 0.7 }}
-        className="absolute -left-14 top-24 z-20"
+        className="absolute -left-12 -top-7 z-20"
       >
         <div className="animate-float glass-card flex items-center gap-3 rounded-2xl px-4 py-3">
           <span className="grid size-9 place-items-center rounded-xl bg-success/15 text-success">
@@ -52,7 +52,7 @@ export function DashboardMockup() {
           </span>
           <div>
             <p className="text-[11px] text-muted-foreground">Payment received</p>
-            <p className="font-mono text-sm font-semibold">+NPR 8,500</p>
+            <p className="text-sm font-bold tabular-nums">+NPR 8,500</p>
           </div>
         </div>
       </motion.div>
@@ -60,7 +60,7 @@ export function DashboardMockup() {
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 1.3, duration: 0.7 }}
-        className="absolute -right-8 bottom-16 z-20"
+        className="absolute -bottom-6 -right-6 z-20"
       >
         <div
           className="animate-float glass-card flex items-center gap-2.5 rounded-full py-2 pl-2 pr-4"
@@ -102,7 +102,7 @@ export function DashboardMockup() {
             </div>
             <p className="mt-3 flex items-baseline gap-1.5">
               <span className="text-xs font-semibold text-subtle">NPR</span>
-              <span className="font-mono text-[28px] font-semibold tracking-tight tabular-nums">
+              <span className="font-display text-[28px] font-bold tracking-tight tabular-nums">
                 <CountUp to={42500} delay={0.6} />
               </span>
             </p>
@@ -112,7 +112,7 @@ export function DashboardMockup() {
           </div>
           <div className="glass-panel rounded-2xl p-5">
             <p className="text-xs font-medium text-muted-foreground">Website visitors</p>
-            <p className="mt-3 font-mono text-[28px] font-semibold tracking-tight tabular-nums">
+            <p className="mt-3 font-display text-[28px] font-bold tracking-tight tabular-nums">
               <CountUp to={1284} delay={0.8} />
             </p>
             <div className="mt-3 flex h-12 items-end gap-1">
@@ -167,7 +167,7 @@ export function DashboardMockup() {
                       Order {item.order} · {ago[i]}
                     </p>
                   </div>
-                  <p className="font-mono text-sm font-semibold tabular-nums">
+                  <p className="text-sm font-bold tabular-nums">
                     NPR {item.amount.toLocaleString("en-IN")}
                   </p>
                 </motion.div>

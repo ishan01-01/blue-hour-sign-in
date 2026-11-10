@@ -44,17 +44,15 @@ export function LoadingOverlay({ open, statusIndex }: LoadingOverlayProps) {
             </div>
 
             <div className="h-6 text-center" role="status" aria-live="polite">
-              <AnimatePresence mode="wait">
-                <motion.p
-                  key={statusIndex}
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
-                  className="font-mono text-sm text-foreground"
-                >
-                  {STATUS_MESSAGES[statusIndex]}
-                </motion.p>
-              </AnimatePresence>
+              <motion.p
+                key={statusIndex}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35 }}
+                className="font-mono text-sm text-foreground"
+              >
+                {STATUS_MESSAGES[statusIndex]}
+              </motion.p>
             </div>
 
             <ol className="w-full space-y-2.5">
