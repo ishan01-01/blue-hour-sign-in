@@ -102,7 +102,7 @@ export function DashboardMockup() {
             </div>
             <p className="mt-3 flex items-baseline gap-1.5">
               <span className="text-xs font-semibold text-subtle">NPR</span>
-              <span className="font-display text-[28px] font-bold tracking-tight tabular-nums">
+              <span className="text-[28px] font-extrabold tracking-tight tabular-nums">
                 <CountUp to={42500} delay={0.6} />
               </span>
             </p>
@@ -112,7 +112,7 @@ export function DashboardMockup() {
           </div>
           <div className="glass-panel rounded-2xl p-5">
             <p className="text-xs font-medium text-muted-foreground">Website visitors</p>
-            <p className="mt-3 font-display text-[28px] font-bold tracking-tight tabular-nums">
+            <p className="mt-3 text-[28px] font-extrabold tracking-tight tabular-nums">
               <CountUp to={1284} delay={0.8} />
             </p>
             <div className="mt-3 flex h-12 items-end gap-1">
