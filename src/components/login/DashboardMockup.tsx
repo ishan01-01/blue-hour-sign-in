@@ -34,7 +34,7 @@ export function DashboardMockup() {
     return () => clearInterval(t);
   }, [reduce]);
 
-  const items = [0, 1, 2].map((i) => FEED[(offset + i) % FEED.length]);
+  const items = [0, 1, 2].map((i) => FEED[(offset + i) % FEED.length]!);
   const ago = ["Just now", "2m ago", "6m ago"];
 
   return (

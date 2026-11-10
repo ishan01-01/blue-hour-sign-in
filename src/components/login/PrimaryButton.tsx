@@ -4,9 +4,9 @@ import type { ReactNode } from "react";
 
 interface PrimaryButtonProps {
   children: ReactNode;
-  loading?: boolean;
+  loading?: boolean | undefined;
   type?: "submit" | "button";
-  onClick?: () => void;
+  onClick?: (() => void) | undefined;
 }
 
 export function PrimaryButton({ children, loading, type = "submit", onClick }: PrimaryButtonProps) {
@@ -14,10 +14,10 @@ export function PrimaryButton({ children, loading, type = "submit", onClick }: P
   return (
     <motion.button
       type={type}
-      onClick={onClick}
-      disabled={loading}
-      aria-busy={loading}
-      whileHover={reduce ? undefined : { y: -2 }}
+      {...(onClick ? { onClick } : {})}
+      disabled={!!loading}
+      aria-busy={!!loading}
+      whileHover={reduce ? {} : { y: -2 }}
       whileTap={{ scale: 0.97 }}
       className="group relative flex h-[3.25rem] w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-brand text-[15px] font-bold text-primary-foreground shadow-glow outline-hidden transition-shadow duration-300 hover:shadow-[0_24px_50px_-12px_color-mix(in_oklab,var(--brand-to)_60%,transparent)] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-wait disabled:opacity-80"
     >

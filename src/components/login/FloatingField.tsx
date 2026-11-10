@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils";
 interface FloatingFieldProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "placeholder"> {
   id: string;
   label: string;
-  error?: string;
-  trailing?: ReactNode;
+  error?: string | undefined;
+  trailing?: ReactNode | undefined;
 }
 
 /** Glass input with a floating label, animated focus underline and inline error. */
