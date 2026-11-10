@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { itemVariants } from "./LoginForm";
 import type { AuthView } from "./useLogin";
 
-const COPY: Record<AuthView, { title: string; sub: string }> = {
-  login: { title: "Welcome back", sub: "Sign in to your dashboard, AI tools, website builder and payments." },
-  forgot: { title: "Forgot it? No stress", sub: "We'll get you back into your workspace in a minute." },
-  success: { title: "Welcome back", sub: "Your workspace is ready." },
+const COPY: Record<AuthView, { sub: string }> = {
+  login: { sub: "Sign in to your dashboard, AI tools, website builder and payments." },
+  forgot: { sub: "We'll get you back into your workspace in a minute." },
+  success: { sub: "Your workspace is ready." },
 };
 
 export function BrandHeader({ view }: { view: AuthView }) {
