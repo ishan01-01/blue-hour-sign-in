@@ -33,7 +33,8 @@ export function ForgotForm({ auth }: { auth: UseLoginReturn }) {
       </motion.div>
       <fieldset disabled={auth.isLoading} className="space-y-5">
         <legend className="sr-only">Reset password</legend>
-        <motion.div variants={itemVariants} animate={shake}>
+        <motion.div variants={itemVariants}>
+          <motion.div animate={shake}>
           <FloatingField
             id="reset-email"
             type="email"
@@ -51,6 +52,7 @@ export function ForgotForm({ auth }: { auth: UseLoginReturn }) {
               auth.setEmail(cleanPastedEmail(e.clipboardData.getData("text")));
             }}
           />
+          </motion.div>
         </motion.div>
         <motion.div variants={itemVariants}>
           <PrimaryButton loading={auth.isLoading}>
